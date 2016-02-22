@@ -5,6 +5,7 @@ learnGit
 ##### git rebase -i
 ##### edit 
 =======
+=======
 ##learn "git commit --amend"
 ###  add a new change lost  for previous 
 
@@ -21,3 +22,4 @@ bugfix: git config --global core.editor "/usr/bin/vim --noplugin"
 ###### pick e559e59 I add commit --amend , vi error solved 
 
 修改完成后 , git rebase --continue
+=======
