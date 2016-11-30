@@ -1,0 +1,33 @@
+* Learn Git 笔记
+** git rebase -i 代码修改
+#+BEGIN_SRC git
+$ git log 
+ looking for the hash number your want to back to , then 'git rebase -i fhslfjs26482482' , 
+ fhslfjs26482482 is previous hashnum than you want modify one.
+$ git rebase -i "fhslfjs26482482"
+
+ pick bdccbef Create README.md & add branchDec. hehe                                                  
+ pick 4a121e1 modify by git rebase, hehe                                                              
+ edit 9baf6e1 add a new file, --amend                                                                 
+ pick e559e59 I add commit --amend , vi error solved 
+
+修改完成后 , git rebase --continue
+
+#+END_SRC
+
+** git commit --amend 后,vim编辑提交后,出现错误:vi error ...
+#+BEGIN_EXAMPLE
+
+$ git config --global core.editor "/usr/bin/vim --noplugin"
+修改为vim 编辑器
+#+END_EXAMPLE
+** 单独恢复一个文件到指定的版本
+#+BEGIN_EXAMPLE
+首先查看该文件的历史版本信息：git log Default@2x.png
+
+记录下需要恢复的commit版本号：如 9aa51d89799716aa68cff3f30c26f8815408e926
+
+恢复该文件：git reset 9aa51d89799716aa68cff3f30c26f8815408e926 Default@2x.png
+
+提交git:git commit -m "revert old file"
+#+END_EXAMPLE
