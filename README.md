@@ -29,6 +29,9 @@
     
     修改完成后 , git rebase --continue
 
+注意: 多人协作,共同开发时,不要对master分支rebase, 不然, 你的队友会骂娘的.  
+      本地  **git checkout -b newbranch** 只对 newbranch进行 rebase, 完成后 **merge** 到本地的 \*master\*分支,再\*push\*到 服务器端.
+
 ## git commit &#x2013;amend 后,vim编辑提交后,出现错误:vi error &#x2026;<a id="orgheadline2"></a>
 
     $ git config --global core.editor "/usr/bin/vim --noplugin"
