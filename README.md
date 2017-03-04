@@ -2,18 +2,19 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline4">1. Learn Git 笔记</a>
+<li><a href="#orgheadline5">1. Learn Git 笔记</a>
 <ul>
 <li><a href="#orgheadline1">1.1. git rebase -i 代码修改</a></li>
 <li><a href="#orgheadline2">1.2. git commit &#x2013;amend 后,vim编辑提交后,出现错误:vi error &#x2026;</a></li>
 <li><a href="#orgheadline3">1.3. 单独恢复一个文件到指定的版本</a></li>
+<li><a href="#orgheadline4">1.4. 解决没有共同祖先的分支时错误：fatal: refusing to merge unrelated histories</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-# Learn Git 笔记<a id="orgheadline4"></a>
+# Learn Git 笔记<a id="orgheadline5"></a>
 
 ## git rebase -i 代码修改<a id="orgheadline1"></a>
 
@@ -46,3 +47,9 @@
     恢复该文件：git reset 9aa51d89799716aa68cff3f30c26f8815408e926 Default@2x.png
     
     提交git:git commit -m "revert old file"
+
+## 解决没有共同祖先的分支时错误：fatal: refusing to merge unrelated histories<a id="orgheadline4"></a>
+
+    先把github上的版本pull 下来
+    $:git pull origin master --allow-unrelated-histories
+    合并后再push上remote。

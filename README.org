@@ -33,3 +33,9 @@ $ git config --global core.editor "/usr/bin/vim --noplugin"
 
 提交git:git commit -m "revert old file"
 #+END_EXAMPLE
+** 解决没有共同祖先的分支时错误：fatal: refusing to merge unrelated histories
+#+BEGIN_EXAMPLE
+先把github上的版本pull 下来
+$:git pull origin master --allow-unrelated-histories
+合并后再push上remote。
+#+END_EXAMPLE
