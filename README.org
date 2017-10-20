@@ -47,3 +47,9 @@ $git remote rm origin
 $git remote add origin git@github.com:username/myapp.git 
 
 #+END_SRC
+** 文件移出缓冲区rm --cached
+#+BEGIN_EXAMPLE
+git add file.txt
+git rm --cached file.txt
+将file.txt 从cached中移除
+#+END_EXAMPLE
