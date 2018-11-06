@@ -57,6 +57,7 @@ git rm --cached file.txt
 
 
 *** 本文转自：https://segmentfault.com/a/1190000002439923
+#+BEGIN_EXAMPLE
 Gitlab 创建备份
 使用Gitlab一键安装包安装Gitlab非常简单, 同样的备份恢复与迁移也非常简单. 使用一条命令即可创建完整的Gitlab备份:
 
@@ -94,3 +95,11 @@ Gitlab迁移
 
 其他
 最新版本的Gitlab已经修复了HTTPS设备的BUG, 现在使用官方HTTPS配置即可轻松启用HTTPS.  
+#+END_EXAMPLE
+
+** Git archive 导出zip包 
+#+BEGIN_SRC git
+git archive -o latest.zip HEAD
+git archive -o latest.zip master
+
+#+END_SRC
